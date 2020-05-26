@@ -5,7 +5,7 @@ A cookiecutter template for python projects intended to be pip-installed
 
 [cookiecutter](https://github.com/audreyr/cookiecutter)
 
-Inspired by: [sloria](https://github.com/wdm0006/cookiecutter-flask.git)
+Forked from: [sloria](https://github.com/wdm0006/cookiecutter-pipproject.git)
 
 
 Using CookieCutter for your project
