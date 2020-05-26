@@ -5,14 +5,14 @@ A cookiecutter template for python projects intended to be pip-installed
 
 [cookiecutter](https://github.com/audreyr/cookiecutter)
 
-Inspired by: [sloria](https://github.com/sloria/cookiecutter-flask.git)
+Inspired by: [sloria](https://github.com/wdm0006/cookiecutter-flask.git)
 
 
 Using CookieCutter for your project
 -----------------------------------
 
     $ pip install cookiecutter
-    $ cookiecutter https://github.com/wdm0006/cookiecutter-pipproject.git
+    $ cookiecutter gh:PythonCharmers/cookiecutter-pipproject
 
 You will be asked about your basic info (name, project name, app name, etc.). This info will be used in your new project.
 
