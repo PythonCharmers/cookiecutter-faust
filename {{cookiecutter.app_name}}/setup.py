@@ -33,7 +33,7 @@ setup(
     long_description_content_type='text/markdown', # as README.md is markdown
 
     # define what permissions you give for others to use (ie, what licence)
-    license='BSD',
+    license='All rights reserved',
 
     # find all sub-packages in root folder except docs and tests folders
     packages=find_packages(exclude=['docs', 'tests*']),
