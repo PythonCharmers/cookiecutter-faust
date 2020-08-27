@@ -1,0 +1,15 @@
+-r requirements.txt
+# Documentation generation
+bump2version
+sphinx
+sphinx_rtd_theme
+# unit tests
+pytest
+coverage
+pytest-cov
+hypothesis
+faker
+# packaging and release
+setuptools
+wheel
+twine
