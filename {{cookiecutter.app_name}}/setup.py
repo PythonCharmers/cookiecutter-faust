@@ -21,7 +21,7 @@ install_requires = [x.strip() for x in all_reqs]
 
 # the actual setup, all done through the setup() function
 setup(
-    name='{{cookiecutter.short_name}}{{cookiecutter.app_name}}',
+    name='{{cookiecutter.app_name}}',
     version=__version__,
 
     # list of dependencies created above (from requirements.txt)
@@ -38,7 +38,7 @@ setup(
     # find all sub-packages in root folder except docs and tests folders
     packages=find_packages(exclude=['docs', 'tests*']),
 
-    # include additional files in MANIFEST.in 
+    # include additional files in MANIFEST.in
     include_package_data=True,
     author='{{cookiecutter.full_name}}'
     )

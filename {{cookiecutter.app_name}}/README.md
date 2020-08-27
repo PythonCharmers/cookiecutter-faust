@@ -14,11 +14,11 @@ Installation / Usage
 
 To install use pip:
 
-    $ pip install {{cookiecutter.short_name}}{{cookiecutter.app_name}}
+    $ pip install {{cookiecutter.app_name}}
 
 
 
-    
+
 Contributing
 ------------
 

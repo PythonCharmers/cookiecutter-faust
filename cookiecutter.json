@@ -1,8 +1,7 @@
 {
-	"full_name": "Errol Lloyd",
-	"short_name": "errol",
-	"project_name": "My Demo Project",
-	"app_name": "demoproj",
-	"project_short_description": "A python package that can be installed with pip.",
-	"version": "0.0.1"
+        "full_name": "Errol Lloyd",
+        "project_name": "My Demo Project",
+        "app_name": "demoproj",
+        "project_short_description": "A python package that can be installed with pip.",
+        "version": "0.0.1"
 }
