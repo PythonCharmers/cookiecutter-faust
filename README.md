@@ -20,10 +20,7 @@ You will be asked about your basic info (name, project name, app name, etc.). Th
 Publishing your project to pypi
 -------------------------------
 
-There are two ways to publish your project:
-
- * the manual way, outlined [here](http://www.willmcginnis.com/2015/11/12/create-a-pip-installable-python-package-in-2-minutes/)
- * and with pypi-publisher [ppp](https://github.com/wdm0006/pypi-publisher)
+Follow the instructions [here](https://packaging.python.org/tutorials/packaging-projects/) and use twine to publish to the Python Package Index.
  
 Goals
 -----
@@ -33,7 +30,7 @@ to stay pretty minimal, but contains everything needed to make a project that in
 
  * Sphinx documentation
  * Installable via pip in pypi
- * Testing via Nose and Coverage
+ * Testing via pytest, hypothesis and coverage
 
 In the future, we may include some other things like:
 
