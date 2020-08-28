@@ -1,6 +1,10 @@
 -r requirements.txt
 # Documentation generation
+{%- if cookiecutter.version_scheme == 'SemVer' %}
 bump2version
+{%- else %}
+pycalver
+{%- endif %}
 sphinx
 sphinx_rtd_theme
 # unit tests
