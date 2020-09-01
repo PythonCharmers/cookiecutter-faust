@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
 
 # build the docs
-cd docs
+cd docs || exit
 make clean
 make html
 cd ..
 
 # commit and push
-git add -A
+git add -A || exit
 git commit -m "building and pushing docs"
-git push origin master
+git push origin master || :
 
 # switch branches and pull the data we want
-git checkout gh-pages
+git checkout gh-pages || git checkout -b gh-pages
 rm -rf .
 touch .nojekyll
 git checkout master docs/build/html
@@ -20,7 +20,7 @@ mv ./docs/build/html/* ./
 rm -rf ./docs
 git add -A
 git commit -m "publishing updated docs..."
-git push origin gh-pages
+git push origin gh-pages || :
 
 # switch back
 git checkout master
