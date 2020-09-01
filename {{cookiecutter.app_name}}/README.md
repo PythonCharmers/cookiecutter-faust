@@ -1,30 +1,23 @@
-{{ cookiecutter.project_name }}
-===============================
+# {{ cookiecutter.project_name }}
+
 
 version number: {{ cookiecutter.version }}
 author: {{ cookiecutter.full_name }}
 
-Overview
---------
+## Overview
 
 {{ cookiecutter.project_short_description }}
 
-Installation / Usage
---------------------
+## Installation / Usage
 
 To install use pip:
 
     $ pip install {{cookiecutter.app_name}}
 
-
-
-
-Contributing
-------------
+## Contributing
 
 TBD
 
-Example
--------
+## Example
 
 TBD

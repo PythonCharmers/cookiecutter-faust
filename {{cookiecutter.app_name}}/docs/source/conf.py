@@ -39,7 +39,7 @@ templates_path = ['_templates']
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 # source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
+source_suffix = ['.rst', '.md']
 
 # The encoding of source files.
 #source_encoding = 'utf-8-sig'
@@ -49,7 +49,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = '{{ cookiecutter.project_name }}'
-copyright = '2016, {{ cookiecutter.full_name }}'
+copyright = "{% now 'utc', '%Y' %}, {{ cookiecutter.full_name }}"
 author = '{{ cookiecutter.full_name }}'
 
 # The version info for the project you're documenting, acts as replacement for
