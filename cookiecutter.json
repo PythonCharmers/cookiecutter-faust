@@ -3,7 +3,9 @@
     "project_name": "My Demo Project",
     "app_name": "{{ cookiecutter.project_name | slugify(separator='_') }}",
     "project_short_description": "A python package that can be installed with pip.",
-    "service_name": "The Faust service name",
+    "service_name": "{{ cookiecutter.project_name | slugify(separator='_') }}",
+    "kafka_broker": "kafka://localhost",
+    "kafka_store": "memory://",
     "version_scheme": ["SemVer", "CalVer"],
     "version": "{% if cookiecutter.version_scheme == 'SemVer' %}0.0.1{% else %}v{% now 'utc', '%Y' %}{% now 'utc', '%m' %}.0001{% endif %}",
     "_extensions": ["jinja2_time.TimeExtension", "cookiecutter.extensions.SlugifyExtension"]
