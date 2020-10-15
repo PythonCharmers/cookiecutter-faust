@@ -40,5 +40,11 @@ setup(
 
     # include additional files in MANIFEST.in
     include_package_data=True,
-    author='{{cookiecutter.full_name}}'
-    )
+    author='{{cookiecutter.full_name}}',
+
+    entry_points={
+        'console_scripts': [
+            '{{cookiecutter.app_name}} = {{cookiecutter.app_name}}.app:main',
+        ]
+    }
+)
