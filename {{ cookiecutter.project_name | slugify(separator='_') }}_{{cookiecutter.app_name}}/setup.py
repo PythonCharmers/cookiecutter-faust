@@ -18,6 +18,11 @@ with open(path.join(here, 'requirements.txt'), encoding='utf-8') as f:
 
 install_requires = [x.strip() for x in all_reqs]
 
+with open(path.join(here, 'dev-requirements.txt'), encoding='utf-8') as f:
+    all_reqs = f.read().split('\n')
+
+dev_install_requires = [x.strip() for x in all_reqs]
+
 
 # the actual setup, all done through the setup() function
 setup(
@@ -46,5 +51,9 @@ setup(
         'console_scripts': [
             '{{cookiecutter.app_name}} = {{cookiecutter.app_name}}.app:main',
         ]
+    },
+
+    extras_require={
+        'dev': dev_install_requires
     }
 )

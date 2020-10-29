@@ -11,6 +11,8 @@ sphinx_rtd_theme
 pytest
 coverage
 pytest-cov
+pytest-async
+pytest-mock
 hypothesis
 faker
 # packaging and release
