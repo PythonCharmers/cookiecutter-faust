@@ -13,15 +13,26 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 # dependencies
 # get the dependencies and installs
-with open(path.join(here, 'requirements.txt'), encoding='utf-8') as f:
-    all_reqs = f.read().split('\n')
+def parse_requirements(path):
+    """
+    Parse requirements files to allow easier separation in to groups.
 
-install_requires = [x.strip() for x in all_reqs]
+    Keep the line filtering simple, but we could go the whole way in implementing
+    https://pip.pypa.io/en/stable/reference/pip_install/#requirements-file-format
+    if required.
+    """
+    for line in open(path):
+        line = line.strip()
+        if not line or line.startswith('#'):
+            continue
 
-with open(path.join(here, 'dev-requirements.txt'), encoding='utf-8') as f:
-    all_reqs = f.read().split('\n')
+        if line.startswith('-r'): # looking at another requirements file
+            yield from parse_requirements(line[2:].strip())
+        else:
+            yield line
 
-dev_install_requires = [x.strip() for x in all_reqs]
+install_requires = list(parse_requirements('requirements.txt'))
+dev_install_requires = list(parse_requirements('dev-requirements.txt'))
 
 
 # the actual setup, all done through the setup() function
