@@ -1,3 +1,2 @@
-faust[fast]
-faust[debug]
+faust[fast,debug,aiomonitor]
 aiomonitor
